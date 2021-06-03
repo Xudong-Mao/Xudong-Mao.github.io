@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>OJ搭建记录 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录一次通过青岛OJ开源平台搭建自己的oj​      为什么要搭建oj？在各种平台刷题过于无聊了，想要和其他人一起分享自己喜欢的题，同时因为以前用过青岛OJ进行考核，搭建和部署比较简单，自然想搭建一个来玩玩，于是去请教ZY大大。🆗多的不说，开干！ 1.一些必备的网站   1.github地址：https:&#x2F;&#x2F;github.com&#x2F;QingdaoU&#x2F;OnlineJudge&#x2F;blob&#x2F;master">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OJ搭建记录">
+<meta property="og:url" content="http://example.com/2020/10/26/OJ%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录一次通过青岛OJ开源平台搭建自己的oj​      为什么要搭建oj？在各种平台刷题过于无聊了，想要和其他人一起分享自己喜欢的题，同时因为以前用过青岛OJ进行考核，搭建和部署比较简单，自然想搭建一个来玩玩，于是去请教ZY大大。🆗多的不说，开干！ 1.一些必备的网站   1.github地址：https:&#x2F;&#x2F;github.com&#x2F;QingdaoU&#x2F;OnlineJudge&#x2F;blob&#x2F;master">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/01/10/rGk1qXpdChsJT4Q.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/10/N1yVAUBamWjdtZK.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/10/BAQn92zJTckDUVt.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/10/WeTlL4sNuHAcz7P.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/10/M5REyLfwak31enX.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/vst3dJCp1qmTl6Y.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/vXO3oJT5FaNMtd2.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/oLar5d2wN8Ex6yj.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/6bykP9O3DVLtgrC.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/UnucNbEGjsemzg1.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/rzIFCcmypgT47u6.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/rR47ocSEO9dMKAh.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/09/wcjzXmaFKBQ18GY.png">
+<meta property="article:published_time" content="2020-10-26T01:22:54.000Z">
+<meta property="article:modified_time" content="2021-01-28T12:03:56.034Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/01/10/rGk1qXpdChsJT4Q.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-OJ搭建记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/26/OJ%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time class="dt-published" datetime="2020-10-26T01:22:54.000Z" itemprop="datePublished">2020-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      OJ搭建记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="记录一次通过青岛OJ开源平台搭建自己的oj"><a href="#记录一次通过青岛OJ开源平台搭建自己的oj" class="headerlink" title="记录一次通过青岛OJ开源平台搭建自己的oj"></a>记录一次通过青岛OJ开源平台搭建自己的oj</h1><p>​      为什么要搭建oj？在各种平台刷题过于无聊了，想要和其他人一起分享自己喜欢的题，同时因为以前用过青岛OJ进行考核，搭建和部署比较简单，自然想搭建一个来玩玩，于是去请教ZY大大。🆗多的不说，开干！</p>
+<h2 id="1-一些必备的网站"><a href="#1-一些必备的网站" class="headerlink" title="1.一些必备的网站"></a>1.一些必备的网站</h2><p>   1.github地址：<a target="_blank" rel="noopener" href="https://github.com/QingdaoU/OnlineJudge/blob/master/README-CN.md">https://github.com/QingdaoU/OnlineJudge/blob/master/README-CN.md</a></p>
+<p>   2.官方文档：<a target="_blank" rel="noopener" href="https://docs.onlinejudge.me/#/onlinejudge/guide/using_cdn">https://docs.onlinejudge.me/#/onlinejudge/guide/using_cdn</a></p>
+<p>   3.阿里云：<a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
+<h2 id="2-首先我们需要在阿里云购买一台云服务器，作者是白嫖的学生服务器随软不是最强的但是用来搭建我们的OJ已经足够了"><a href="#2-首先我们需要在阿里云购买一台云服务器，作者是白嫖的学生服务器随软不是最强的但是用来搭建我们的OJ已经足够了" class="headerlink" title="2.首先我们需要在阿里云购买一台云服务器，作者是白嫖的学生服务器随软不是最强的但是用来搭建我们的OJ已经足够了"></a>2.首先我们需要在阿里云购买一台云服务器，作者是白嫖的学生服务器随软不是最强的但是用来搭建我们的OJ已经足够了</h2><p>​    获得云服务器后我们需要登陆阿里云控制台对他进行一些基础的设置</p>
+<p>​        （1）打开旁边的控制选项</p>
+<p>​                <img src="https://i.loli.net/2021/01/10/rGk1qXpdChsJT4Q.png" alt="image-20210110232220266"></p>
+<p>选择云服务器ECS这个时候我们就可以看见我们的远端云服务器概况了</p>
+<p>​        （2）接着我们选择旁边的实例</p>
+<p><img src="https://i.loli.net/2021/01/10/N1yVAUBamWjdtZK.png" alt="image-20210110232426361"></p>
+<p>会看见这种情况我们不必着急不是我们的云服务器不见了而是我们的地域没有正确选择，所以只需要如下操作:</p>
+<p><img src="https://i.loli.net/2021/01/10/BAQn92zJTckDUVt.png" alt="image-20210110232652386"></p>
+<p>接着我们就可以看见自己的实例了：</p>
+<p><img src="https://i.loli.net/2021/01/10/WeTlL4sNuHAcz7P.png" alt="image-20210110232743738"></p>
+<p>​            （3）安全组配置</p>
+<p><img src="https://i.loli.net/2021/01/10/M5REyLfwak31enX.png" alt="image-20210110232843622"></p>
+<p>配置规则：</p>
+<p>建议先回到旧版</p>
+<p><img src="https://i.loli.net/2021/01/09/vst3dJCp1qmTl6Y.png" alt="image-20210109224000186"></p>
+<p>添加安全规则</p>
+<p><img src="https://i.loli.net/2021/01/09/vXO3oJT5FaNMtd2.png" alt="image-20210109224606074"></p>
+<p><img src="https://i.loli.net/2021/01/09/oLar5d2wN8Ex6yj.png" alt="9"></p>
+<p><img src="https://i.loli.net/2021/01/09/6bykP9O3DVLtgrC.png" alt="image-20210109224634776"></p>
+<p><img src="https://i.loli.net/2021/01/09/UnucNbEGjsemzg1.png" alt="image-20210109224747682"></p>
+<p>网络配置好以后我们还需要重置一下远程登陆密码</p>
+<p><img src="https://i.loli.net/2021/01/09/rzIFCcmypgT47u6.png" alt="image-20210109225137337"></p>
+<p>重置一下实例密码</p>
+<p><img src="https://i.loli.net/2021/01/09/rR47ocSEO9dMKAh.png" alt="image-20210109225831694"></p>
+<p>运用远程连接我们就可以进入云服务器了</p>
+<p><img src="https://i.loli.net/2021/01/09/wcjzXmaFKBQ18GY.png" alt="image-20210109225945510"></p>
+<p>然后就可以开始我们的OJ搭建了</p>
+<p>我们用的是青岛OJ比较简单</p>
+<p>首先执行下面的命令安装对应的依赖环境</p>
+<p>ubuntu系统用户：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install -y vim python-pip curl git</span><br><span class="line">pip install docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>centos系统用户：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum update &amp;&amp; yum install -y vim python-pip curl git</span><br><span class="line">pip install docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>在控制台输入密码登陆虚拟机然后执行以上对应的命令行</p>
+<p>注：如果是centos8那么我们的python-pip是没有效果的</p>
+<p>因为在centos8中已经更新为pip3命令所以我们需要执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install python3-pip</span><br></pre></td></tr></table></figure>
+
+<p>在安装docker也会遇见一些问题建议参考一下文章安装docker</p>
+<p><a target="_blank" rel="noopener" href="https://docsxyz.com/wiki/docker/install">https://docsxyz.com/wiki/docker/install</a></p>
+<p>所以综上所述我们选择比较老一些版本的centos更好，比如说centos7</p>
+<p>如果这些环境都已经安装好啦我们就可以开始执行下面的操作了</p>
+<h2 id="3-安装-开干-："><a href="#3-安装-开干-：" class="headerlink" title="3.安装(开干)："></a>3.安装(开干)：</h2><p>1.克隆源码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b2.0https://github.com/QingdaoU/OnlineJudgeDeploy.git &amp;&amp; cd OnlineJudgeDeploy</span><br></pre></td></tr></table></figure>
+
+<p>2.启动docker</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+
+<p>可能遇到的问题：ERROR: Couldn’t connect to Docker daemon at <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http+docker://localunixsocket">http+docker://localunixsocket</a> - is it running?</p>
+<p>解决办法: 运行命令<code>sudo systemctl start docker</code>启动docker(若无效请查看<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.awaimai.com/2587.html">参考资料</a>按照对应情况排查)</p>
+<p>这里可能需要等待一定的时间</p>
+<p>4.运行OJ系统</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>5.修改端口</p>
+<p>80和443端口可能被占用了</p>
+<p>vim docker-compose.yml</p>
+<p>端口号在最下面</p>
+<p>修改值可以随意只要不是原来的端口就可以了至此我们的OJ就基本搭建完成了</p>
+<p>6.如何访问呢？</p>
+<p>打开我们的浏览器输入云服务器公共ip然后就可以访问了</p>
+<p>登陆root用户 直接在我们ip后面加上\admin回车就可以访问了初始用户名和密码分别是root和rootroot</p>
+<p>例如，ip是185.12.254.40，第四步骤设置的其中一个端口是1000</p>
+<p>则通过<code>185.12.254.40:1000</code>访问首页</p>
+<p>``185.12.254.40:1000/admin`访问管理员帐号</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/26/OJ%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" data-id="ckpgh9po90004iwtlb77c1czx" data-title="OJ搭建记录" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/" rel="tag">life</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/06/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/12/python%E7%9A%84%E5%87%A0%E4%B8%AA%E5%BF%AB%E6%8D%B7%E6%8A%80%E5%B7%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python的十个快捷技巧</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/" rel="tag">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/learn/" style="font-size: 20px;">learn</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/03/%E6%96%B0%E7%89%88cc%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/03/Ubuntu18.04-updete-python/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/03/Xiaohei/">Xiaohei</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/26/OJ%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">OJ搭建记录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
