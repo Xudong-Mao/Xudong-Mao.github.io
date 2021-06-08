@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Hi xiaohei</title>
+  <title>记录一次使用DJL的大坑 - Hi xiaohei</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -165,8 +165,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-06-03 13:47" pubdate>
-        2021年6月3日 下午
+      <time datetime="2021-06-08 13:29" pubdate>
+        2021年6月8日 下午
       </time>
     </span>
   
@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      61 字
+      916 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      9
        分钟
     </span>
   
@@ -217,13 +217,33 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">记录一次使用DJL的大坑</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="新版CC开启移动热点操作"><a href="#新版CC开启移动热点操作" class="headerlink" title="新版CC开启移动热点操作"></a>新版CC开启移动热点操作</h1><p>打开设备管理器：</p>
-<p><img src="https://mpicgo.oss-cn-chengdu.aliyuncs.com/img/image-20210104185344434.png" srcset="/img/loading.gif" alt="image-20210104185344434"></p>
-<p>启用Microsoft  wi-fi Direct Virtual Adapter #3 虚拟WiFi驱动，就可以了。</p>
-<p>接下来直接在电脑设置中打开移动热点就以愉快的玩耍了。</p>
+              <h1 id="记录一次使用DJL的大坑"><a href="#记录一次使用DJL的大坑" class="headerlink" title="记录一次使用DJL的大坑"></a>记录一次使用DJL的大坑</h1><h2 id="一、前言-file-cabinet"><a href="#一、前言-file-cabinet" class="headerlink" title="一、前言:file_cabinet:"></a>一、前言:file_cabinet:</h2><p>最近学习深度学习但是使用pytorch来部署模型到web端又不是很方便，所以想着:thinking:是不是Java有途径直接加载训练好的模型，经过一顿操作:🔎真就找到了一个通过Java进行深度学习的库，DJL(深度Java学习),同时寻找到以下博客：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jerry11112/article/details/108166689%EF%BC%8C">https://blog.csdn.net/jerry11112/article/details/108166689，</a></p>
+<p>直接创建springboot+Maven+DJL,使用Java调取pytorch模型，不要太爽🤣，但是万万没有想到的这里原来拥有着不少坑，所以在此记录以下自己遇见的几个少见的坑，帮助哪些想要使用DJL却遇见坑直接放弃的人，找到解决方法✨。</p>
+<h3 id="1-第一坑Java版本问题："><a href="#1-第一坑Java版本问题：" class="headerlink" title="1.第一坑Java版本问题："></a>1.第一坑Java版本问题：</h3><p>随着Java版本不断更新，Java加入的新功能越来越多可是用于学习的我们大多数还停留在Java1.8.0，虽然这个版本大部分Java功能都能用，但是如果你想要使用DJL这个包的话，最好还是直接使用java11这样会避免许多麻烦👋🏼</p>
+<h3 id="2-第二坑模型下载问题："><a href="#2-第二坑模型下载问题：" class="headerlink" title="2.第二坑模型下载问题："></a>2.第二坑模型下载问题：</h3><p>在下载模型的时候笔者直接使用的亚马逊提供的resnet模型地址，这样在国内即使没有翻🧱我们还是可以快速的下载训练好的模型，可是我还是推荐你开启你的✈这样会快不少，</p>
+<h3 id="3-第三坑模型加载路径中文问题："><a href="#3-第三坑模型加载路径中文问题：" class="headerlink" title="3.第三坑模型加载路径中文问题："></a>3.第三坑模型加载路径中文问题：</h3><p>下载好模型我们通过zoomodel加载时有时会出现找不到文件的错误这个时候请检查你的项目是不是在中文目录下，存在中文它是找不到你下好的模型的</p>
+<h3 id="4-报：No-deep-learning-engine-found（最难最大的坑）"><a href="#4-报：No-deep-learning-engine-found（最难最大的坑）" class="headerlink" title="4. 报：No deep learning engine found（最难最大的坑）"></a>4. 报：No deep learning engine found（最难最大的坑）</h3><p>出现这种情况的原因很多，笔者遇见的问题可能是少见的，一波搜索🔎出来的答案都不尽人意，也没有解决，废话不说直接上bug截图:</p>
+<p><img src="https://i.loli.net/2021/06/08/t5ikMcQUas947IP.jpg" srcset="/img/loading.gif"></p>
+<p>图片较长，分成两个部分</p>
+<p><img src="https://i.loli.net/2021/06/08/GJCxFZu4WamiDBM.png" srcset="/img/loading.gif"></p>
+<p>由上面的截图可以看到是我的一个文件路径出来问题，直接按照官方连接去查照解决方法官方连接：<a target="_blank" rel="noopener" href="https://github.com/awslabs/djl/blob/master/docs/development/troubleshooting.md%EF%BC%8C%E4%B8%8B%E8%BD%BD%E4%BA%86DirectX%E4%BF%AE%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%9D%A5%E5%AE%89%E8%A3%85%E9%81%97%E5%A4%B1%E4%BE%9D%E8%B5%96%E9%A1%B9%EF%BC%8C%E4%BD%86%E6%98%AF%E7%BB%93%E6%9E%9C%E4%B8%80%E6%A0%B7%E5%87%BA%E7%8E%B0%E8%BF%99%E7%A7%8D%E9%94%99%E8%AF%AF%EF%BC%8C%E6%97%A0%E5%A5%88%E5%8F%A6%E8%BE%9F%E8%B9%8A%E5%BE%84%E7%9B%B4%E6%8E%A5%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6%E6%89%BE%E4%B8%8D%E5%88%B0%E7%9A%84%E5%8E%9F%E5%9B%A0%EF%BC%8C%E5%8A%9F%E5%A4%AB%E4%B8%8D%E8%B4%9F%E6%9C%89%E7%BC%98%E4%BA%BA%E5%9C%A8%E4%B8%8B%E9%9D%A2%E7%9A%84%E8%BF%9E%E6%8E%A5%E4%B8%AD%E7%BB%99%E4%BA%86%E6%88%91%E7%81%B5%E6%84%9F%F0%9F%A5%B0%EF%BC%9A">https://github.com/awslabs/djl/blob/master/docs/development/troubleshooting.md，下载了DirectX修复工具来安装遗失依赖项，但是结果一样出现这种错误，无奈另辟蹊径直接搜索文件找不到的原因，功夫不负有缘人在下面的连接中给了我灵感🥰：</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/62021601/pytorch-could-not-find-module">python - Pytorch could not find module - Stack Overflow</a></p>
+<p>这个哥们的评论：</p>
+<p><img src="https://i.loli.net/2021/06/08/AS45wH8qMj9yEFT.png" srcset="/img/loading.gif" alt="image-20210608231039973"></p>
+<p>所以经过一顿操作：</p>
+<p>1️⃣找到报错的地址查看caffe2_nvrtc.dell是否存在，但是它又存在就很奇怪，</p>
+<p><img src="https://i.loli.net/2021/06/08/NifOedxjaHESlrJ.png" srcset="/img/loading.gif"></p>
+<p>2️⃣去我们安装的pytorch的anaconda环境看看，会得到一个一样名字的文件，但是一会发现它们的大小不一样。</p>
+<p><img src="https://i.loli.net/2021/06/08/nyeBzEmZvMLkFfY.png" srcset="/img/loading.gif"></p>
+<p>4️⃣将这个文件复制到前面文件路径并覆盖它，</p>
+<p><img src="https://i.loli.net/2021/06/08/dOHMgcNLofWV8jE.png" srcset="/img/loading.gif"></p>
+<p>5️⃣然后打开你的编译环境，运行djl相关代码神奇的现象就发生了，你的项目可以运行了，这里注意以下，自己预测的图片最好和项目同一个文件夹下</p>
+<p><img src="G:/图片3.png" srcset="/img/loading.gif"></p>
+<h2 id="二、总结"><a href="#二、总结" class="headerlink" title="二、总结"></a>二、总结</h2><p>java和pytorch的完美结合估计还有很远的路要走，但是DJL的出现可以说对与Java加速深度学习部署到生产环境有很好的作用，虽然在使用的时候遇见的不少的坑，但是两者融合后还是很不错的，洋洋洒洒写了这些，希望帮助到想使用DJL但是又遇见不少坑的朋友们避免这些坑。</p>
 
             </div>
             <hr>
@@ -240,9 +260,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/06/08/Xiaohei/">
+                      <a href="/2021/06/08/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8DJL%E7%9A%84%E5%A4%A7%E5%9D%91/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">记录一次使用DJL的大坑</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -250,7 +270,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/06/03/Ubuntu18.04-updete-python/">
+                      <a href="/2021/06/03/%E6%96%B0%E7%89%88cc%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9%E6%96%B9%E6%B3%95/">
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -394,7 +414,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "&nbsp;",
+        "记录一次使用DJL的大坑&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
